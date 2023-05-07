@@ -1,167 +1,71 @@
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;}
 
-h1{
-	font-size: 40px;
-	color: #bb1301;
-	text-align: center;
-	margin-top: 35px;
-	margin-bottom: 35px;}
 
-body{background-color: #4287f5;}
+function izm(){
 
-.wrapper{
-	height:790px ;
-	display: grid;
-	grid-template-columns:2fr 3fr;
-	grid-template-rows: 1fr 1fr;
-	grid-gap: 15px;}
+	let h1=prompt('ИЗМЕНИ ЗАГОЛОВОК !','');
 
-.text1{
-	background-color: #acc2e6;
-	font-size: 25px;
-	border-radius: 25px;
-	box-shadow: 7px 7px 7px white;	
-    height: 340px;
-	padding: 12px;
-	margin: 20px;}
+	ex.innerHTML=h1;
+}
 
-.foto1{
-	background-color:#acc2e6 ;
-	border-radius: 25px;
-	box-shadow: 7px 7px 7px white;
-	height: 340px;	
-	margin:20px;
-	background-image: url(../img/foto1.jpg);
-	background-repeat: no-repeat;}
 
-.foto2{
-	background-color: #acc2e6;
-	font-size: 25px;
-	height: 340px;
-	border-radius: 25px;
-	box-shadow: 7px 7px 7px white;	
-	padding: 12px;
-	margin: 20px;
-	background-image: url(../img/foto2.jpg);
-	background-repeat: no-repeat;}
+function plus() {
 
-.text2{
-	background-color:#acc2e6 ;
-	border-radius: 25px;
-	box-shadow: 7px 7px 7px white;
-	height: 340px;
-	margin: 20px;
-	font-size: 25px;
-	padding: 12px;}
+	let num1=document.getElementById('num1').value;
+	let num2=document.getElementById('num2').value;
 
-.footer{
-	height: 150px;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	background-color: #32a852;}
+	num1=Number(num1);
+	num2=Number(num2);
+	
+	let sum= num1+num2;
 
-.beby_footer{
-	color: white;}
+	res.innerHTML=sum;
+}
 
-.meny{
-	float: left;
-	margin-top: -250;}
 
-.nav {
-	margin-top: 30px;
-	height: 15px;
-	background-color: #32a852;}
+function minus() {
 
-.meny li {
-	padding: 0 40px;
-	font-size: 30px;
-	list-style: none;
-	display: inline-block;
-	border-radius: 10px;
-	height: 35px;}
+	let num1=document.getElementById('num1').value;
+	let num2=document.getElementById('num2').value;
 
-.meny a {
-	height: 35px;
-	text-decoration: none;
-	color: white;}
+	num1=Number(num1);
+	num2=Number(num2);
+	
+	let raznost= num1-num2;
 
-.meny a:hover{color: darkgreen;
-	text-shadow: 1px 1px 1px black;}
+	res.innerHTML=raznost;
+}
 
-.meny{
-	margin: 10px 20px;
-	float: left;}
 
-.nav{
-	height: 60px;
-	background-color: #32a852;}
+function reset(){
+  
+     document.getElementById('num2').value='';
+     document.getElementById('num1').value='';
+     
 
-.meny a {
-	height: 35px;
-	text-decoration: none;
-	color: white;}
+     res.innerHTML=0;
+}
 
-.meny a:hover{
-	color: red;}
 
-.meny a:active{
-	color: blue;}
+function umn(){
+	let num1=document.getElementById('num1').value;
+	let num2=document.getElementById('num2').value;
 
-#act {color: darkgreen;
-text-shadow: 1px 1px 1px black;}
+	num1=Number(num1);
+	num2=Number(num2);
+	
+	let proiz= num1*num2;
 
-@media (max-width: 768px){
-    body{
-    	font-family: Arial;}
-    	
-	h1{
-		font-size: 25px;
-		margin: 20px;
-		color: red;
-		text-shadow: 3px 3px 7px black;}
+	res.innerHTML=proiz;
+}
 
-	.meny li {
-	margin-bottom: 7px;
-	padding: 3px 30px ;
-	font-size: 15px;
-	font-weight: 700;
-	list-style: none;
-	display: block;
-	border-radius: 5px;
-	height: 25px;
-	background-color: green;
-	box-shadow: 0 0 5px black;
-	border: solid 1px darkgreen;}
+function del(){
+	let num1=document.getElementById('num1').value;
+	let num2=document.getElementById('num2').value;
 
-#acti{background-color:darkgreen;
-box-shadow: 0 0 5px black;}
+	num1=Number(num1);
+	num2=Number(num2);
+	
+	let chasn= num1/num2;
 
-#act{
-	color: red;}
-
-a{
-	height: 30px;}
-
-nav{
-	height: 80px;
-	background-color: #32a852;}
-
-.nav{
-	display: flex;
-	justify-content: center;}
-
-.wrapper{height:1740px ;
-	display: grid;
-	grid-template-columns: 100%;
-	grid-template-rows: 22% 33% 20% 22%;
-	grid-gap: 5px;}
-
-.text1{height: 530px;
-	font-size: 20px;}
-
-.text2{height: 300px;
-	font-size: 20px;}
+	res.innerHTML=chasn;
+}
